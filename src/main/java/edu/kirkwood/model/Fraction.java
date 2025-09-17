@@ -113,7 +113,6 @@ public class Fraction implements Comparable<Fraction> {
         return numerator == fraction.numerator && denominator == fraction.denominator;
     }
 */
-
     @Override
     public boolean equals(Object other)
     {
