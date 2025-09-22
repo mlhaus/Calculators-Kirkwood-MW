@@ -1,5 +1,7 @@
 package edu.kirkwood.controller;
 
+import edu.kirkwood.model.Fraction;
+
 import static edu.kirkwood.view.Messages.*;
 import static edu.kirkwood.view.UIUtility.pressEnterToContinue;
 import static edu.kirkwood.view.UserInput.getString;
@@ -62,7 +64,101 @@ public class FractionCalculator {
         return new String[]{fraction1, operator, fraction2};
     }
 
+    /**
+     * Convert a String into a Fraction object. Handles whole numbers, proper and improper fractions, and mixed number fractions
+     * @param str is the String to parse
+     * @return a Fraction object representing the parsed String
+     * @throws IllegalArgumentException if the String is not a valid fraction
+     */
+    public static Fraction parseFraction(String str) {
+        Fraction result = null;
+        if(str.contains(" ")) { // Mixed number fraction like "1 1/2"
+            String[] parts = str.split(" ");
+            int whole = 0;
+            try {
+                whole = Integer.parseInt(parts[0]);
+            } catch (NumberFormatException e) {
+                throw new IllegalArgumentException("Invalid whole number. '" + parts[0] + "' (the correct format is '1 2/3')");
+            }
 
+            String[] fractionParts = parts[1].split("/");
+
+            int num = 0;
+            try {
+                num = Integer.parseInt(fractionParts[0]);
+            } catch (NumberFormatException e) {
+                throw new IllegalArgumentException("Invalid numerator. '" + fractionParts[0] + "' (the correct format is '1 2/3')");
+            }
+
+            int den = 1;
+            if(fractionParts.length > 1) {
+                try {
+                    den = Integer.parseInt(fractionParts[1]);
+                } catch (NumberFormatException e) {
+                    throw new IllegalArgumentException("Invalid denominator. '" + fractionParts[1] + "' (the correct format is '1 2/3')");
+                }
+            } else {
+                throw new IllegalArgumentException("Invalid denominator (the correct format is '1 2/3')");
+            }
+
+            if(den == 0) {
+                throw new IllegalArgumentException("Invalid denominator. '" + fractionParts[1] + "' (the correct format is '1 2/3')");
+            }
+
+            // If the fraction part is negative, flip negativity as needed
+            if(num < 0 && den < 0) {
+                num *= -1;
+                den *= -1;
+            } else if (num < 0 && den > 0) {
+                num *= -1;
+                whole *= -1;
+            } else if (num > 0 && den < 0) {
+                den *= -1;
+                whole *= -1;
+            }
+
+            int newNumerator = 0;
+            if(whole > 0) {
+                newNumerator = whole * den + num;
+            } else {
+                newNumerator = whole * den - num;
+            }
+            result = new Fraction(newNumerator, den);
+
+        } else if(str.contains("/")) { // Proper or improper fraction like "1/2" or "3/2"
+            String[] parts = str.split("/");
+
+            int num = 0;
+            try {
+                num = Integer.parseInt(parts[0]);
+            } catch (NumberFormatException e) {
+                throw new IllegalArgumentException("Invalid numerator. '" + parts[0] + "'");
+            }
+
+            int den = 0;
+            try {
+                den = Integer.parseInt(parts[1]);
+            } catch (NumberFormatException e) {
+                throw new IllegalArgumentException("Invalid denominator. '" + parts[1] + "'");
+            }
+
+            if(den == 0) {
+                throw new IllegalArgumentException("Invalid denominator. '" + parts[1] + "'");
+            }
+
+            result = new Fraction(num, den);
+
+        } else { // Whole numbers
+            int whole = 0;
+            try {
+                whole = Integer.parseInt(str);
+            } catch (NumberFormatException e) {
+                throw new IllegalArgumentException("Invalid whole number. '" + str + "'");
+            }
+            result = new Fraction(whole, 1);
+        }
+        return result;
+    }
 
 
 
