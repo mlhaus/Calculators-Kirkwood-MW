@@ -245,12 +245,9 @@ public class Fraction implements Comparable<Fraction> {
      *
      * @param other the fraction to divide by (the divisor)
      * @return a new Fraction object representing the quotient
-     * @throws IllegalArgumentException if the divisor is zero
      */
     public Fraction divide(Fraction other) { //-2/5 5/-3
-        Fraction result = new Fraction();
-        result.numerator = numerator * other.denominator;
-        result.denominator = denominator * other.numerator;
+        Fraction result = new Fraction(numerator * other.denominator, denominator * other.numerator);
         result.simplify();
         return result;
     }

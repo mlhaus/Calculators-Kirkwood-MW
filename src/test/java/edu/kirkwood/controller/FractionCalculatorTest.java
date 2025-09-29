@@ -1,10 +1,17 @@
 package edu.kirkwood.controller;
 
 import edu.kirkwood.model.Fraction;
+import edu.kirkwood.view.UIUtility;
+import edu.kirkwood.view.UserInput;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
+import org.mockito.MockedStatic;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.anyBoolean;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.*;
 
 class FractionCalculatorTest {
 
@@ -297,7 +304,41 @@ class FractionCalculatorTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    void startWithValidInput() {
+        try(
+                MockedStatic<UserInput> staticUserInput = mockStatic(UserInput.class);
+                MockedStatic<UIUtility> staticUIUtility = mockStatic(UIUtility.class);
+        ) {
+            // Arrange
+            staticUserInput.when(() -> UserInput.getString(anyString())).thenReturn("1/2 * 1/2", "quit");
+            // Act
+            FractionCalculator.start();
+            // Assert
+            staticUIUtility.verify(() -> UIUtility.displayError(anyString()), never());
+        }
 
+    }
+
+    @Test
+    @DisplayName("Test start() loop with an invalid operator")
+    void startWithInvalidOperator() {
+        try (MockedStatic<UserInput> staticUserInput = mockStatic(UserInput.class);
+             MockedStatic<UIUtility> staticUIUtility = mockStatic(UIUtility.class)) {
+
+            // ARRANGE: Simulate the user typing bad input, then quitting.
+            staticUserInput.when(() -> UserInput.getString(anyString()))
+                    .thenReturn("1/2 ^ 1/2", "quit");
+
+            // ACT
+            FractionCalculator.start();
+
+            // ASSERT: Verify that displayError was called exactly ONCE with the expected message.
+            staticUIUtility.verify(() -> UIUtility.displayError(
+                    "Invalid format. Ensure operator (+, -, *, /) has a space on both sides."
+            ), times(1));
+        }
+    }
 
 
 

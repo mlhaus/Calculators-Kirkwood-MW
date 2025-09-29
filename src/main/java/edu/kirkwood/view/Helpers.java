@@ -34,6 +34,11 @@ public class Helpers {
         return dateFormatOutput.format(date);
     }
 
+    /**
+     *
+     * @param date
+     * @return
+     */
     public static boolean isDateInThePast(LocalDate date) {
         if (date == null) {
             throw new IllegalArgumentException("Date cannot be null");

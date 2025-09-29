@@ -1,0 +1,438 @@
+==== CONFIGS ====		
+{
+    "base_path": "c:\\Users\\k0519415\\OneDrive\\Kirkwood\\Java II\\2025-26\\Calculators-MW\\src",
+    "out": "c:\\Users\\k0519415\\OneDrive\\Kirkwood\\Java II\\2025-26\\Calculators-MW\\docs",
+    "javadoc_executable": "C:\\Users\\k0519415\\AppData\\Local\\Programs\\jdk-21.0.4\\bin\\javadoc.exe",
+    "exclude": [],
+    "raw_params": ""
+}
+
+==== COMMAND ====
+"C:\Users\k0519415\AppData\Local\Programs\jdk-21.0.4\bin\javadoc.exe" 
+	-sourcepath "c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src" 
+	-d "c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\docs" 
+	"c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\main\java\edu\kirkwood\CalculatorApp.java"
+	"c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\main\java\edu\kirkwood\controller\FractionCalculator.java"
+	"c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\main\java\edu\kirkwood\controller\MyCalculator.java"
+	"c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\main\java\edu\kirkwood\model\Fraction.java"
+	"c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\main\java\edu\kirkwood\view\Helpers.java"
+	"c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\main\java\edu\kirkwood\view\MainMenu.java"
+	"c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\main\java\edu\kirkwood\view\Messages.java"
+	"c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\main\java\edu\kirkwood\view\UIUtility.java"
+	"c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\main\java\edu\kirkwood\view\UserInput.java"
+	"c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java"
+	"c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java"
+
+
+==== JAVADOC OUTPUT ====
+Loading source file c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\main\java\edu\kirkwood\CalculatorApp.java...
+Loading source file c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\main\java\edu\kirkwood\controller\FractionCalculator.java...
+Loading source file c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\main\java\edu\kirkwood\controller\MyCalculator.java...
+Loading source file c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\main\java\edu\kirkwood\model\Fraction.java...
+Loading source file c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\main\java\edu\kirkwood\view\Helpers.java...
+Loading source file c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\main\java\edu\kirkwood\view\MainMenu.java...
+Loading source file c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\main\java\edu\kirkwood\view\Messages.java...
+Loading source file c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\main\java\edu\kirkwood\view\UIUtility.java...
+Loading source file c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\main\java\edu\kirkwood\view\UserInput.java...
+Loading source file c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java...
+Loading source file c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java...
+Constructing Javadoc information...
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:6: error: package org.junit.jupiter.api does not exist
+import org.junit.jupiter.api.DisplayName;
+                            ^
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:7: error: package org.junit.jupiter.api does not exist
+import org.junit.jupiter.api.Test;
+                            ^
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:8: error: package org.junit.jupiter.api.function does not exist
+import org.junit.jupiter.api.function.Executable;
+                                     ^
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:9: error: package org.mockito does not exist
+import org.mockito.MockedStatic;
+                  ^
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:11: error: package org.junit.jupiter.api does not exist
+import static org.junit.jupiter.api.Assertions.*;
+                                   ^
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:12: error: package org.mockito does not exist
+import static org.mockito.ArgumentMatchers.anyBoolean;
+                         ^
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:12: error: static import only from classes and interfaces
+import static org.mockito.ArgumentMatchers.anyBoolean;
+^
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:13: error: package org.mockito does not exist
+import static org.mockito.ArgumentMatchers.anyString;
+                         ^
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:13: error: static import only from classes and interfaces
+import static org.mockito.ArgumentMatchers.anyString;
+^
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:14: error: package org.mockito does not exist
+import static org.mockito.Mockito.*;
+                         ^
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:5: error: package org.junit.jupiter.api does not exist
+import static org.junit.jupiter.api.Assertions.*;
+                                   ^
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:3: error: package org.junit.jupiter.api does not exist
+import org.junit.jupiter.api.*;
+^
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:18: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:29: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:40: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:51: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:63: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:74: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:89: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:104: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:119: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:134: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:151: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:162: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:169: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:180: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:191: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:202: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:213: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:227: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:241: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:255: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:270: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:284: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:296: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:307: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:323: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\controller\FractionCalculatorTest.java:324: error: cannot find symbol
+    @DisplayName("Test start() loop with an invalid operator")
+     ^
+  symbol:   class DisplayName
+  location: class FractionCalculatorTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:12: error: cannot find symbol
+    @BeforeEach
+     ^
+  symbol:   class BeforeEach
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:18: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:24: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:34: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:40: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:58: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:64: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:72: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:80: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:88: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:96: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:102: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:110: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:111: error: cannot find symbol
+    @DisplayName("Test LCM with two positive integers")
+     ^
+  symbol:   class DisplayName
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:116: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:117: error: cannot find symbol
+    @DisplayName("Test LCM where one number is a multiple of the other")
+     ^
+  symbol:   class DisplayName
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:122: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:123: error: cannot find symbol
+    @DisplayName("Test LCM with two prime numbers")
+     ^
+  symbol:   class DisplayName
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:129: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:130: error: cannot find symbol
+    @DisplayName("Test LCM with the number 1")
+     ^
+  symbol:   class DisplayName
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:136: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:137: error: cannot find symbol
+    @DisplayName("Test LCM with identical numbers")
+     ^
+  symbol:   class DisplayName
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:142: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:143: error: cannot find symbol
+    @DisplayName("Test LCM where one of the inputs is zero")
+     ^
+  symbol:   class DisplayName
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:150: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:161: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:167: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:177: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:187: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:188: error: cannot find symbol
+    @DisplayName("Test 1/1 + 2/3 = 5/3")
+     ^
+  symbol:   class DisplayName
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:195: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:196: error: cannot find symbol
+    @DisplayName("Test -1/4 + 2/3 = 5/12")
+     ^
+  symbol:   class DisplayName
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:205: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:206: error: cannot find symbol
+    @DisplayName("Test 25/-100 + -10/-15 = 5/12")
+     ^
+  symbol:   class DisplayName
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:217: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:218: error: cannot find symbol
+    @DisplayName("Test 1/1 - 1/4 = 3/4")
+     ^
+  symbol:   class DisplayName
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:231: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:232: error: cannot find symbol
+    @DisplayName("Test 1/2 - -3/4 = 5/4")
+     ^
+  symbol:   class DisplayName
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:245: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:246: error: cannot find symbol
+    @DisplayName("Test 10/1 - 15/4 = 25/4")
+     ^
+  symbol:   class DisplayName
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:259: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:270: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:279: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:290: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:300: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+c:\Users\k0519415\OneDrive\Kirkwood\Java II\2025-26\Calculators-MW\src\test\java\edu\kirkwood\model\FractionTest.java:310: error: cannot find symbol
+    @Test
+     ^
+  symbol:   class Test
+  location: class FractionTest
+84 errors
+
+
