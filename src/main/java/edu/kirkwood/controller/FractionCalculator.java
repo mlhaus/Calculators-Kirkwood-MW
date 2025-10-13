@@ -61,7 +61,7 @@ public class FractionCalculator {
             }
 
             // Display output
-            System.out.printf("%s %s %s = %s%n%n", 
+            System.out.printf("%s %s %s = %s%n%n",
                     fraction1.toMixedNumber(), operator,  fraction2.toMixedNumber(), result.toMixedNumber());
         }
         fractionGoodbye();
