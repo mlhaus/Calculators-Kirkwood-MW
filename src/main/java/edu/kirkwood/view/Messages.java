@@ -21,6 +21,15 @@ public class Messages {
     public static void fractionGoodbye() {
         displayMessage("Thank you for using Marc's Fraction Calculator");
     }
-    
-    
+
+    public static void currencyGreet() {
+        displayMessage("Welcome to Currency Calculator.");
+        System.out.println("Enter calculations in the format: <amount1> <currency1> <operator> <amount2> <currency2>" + "\n or in <amount> <currency1> to <currency2>");
+        System.out.println("Example: 5.00 USD");
+        System.out.println("The system only accepts 3 digit currency codes, only supported currencies are USD, JPY, GBP, and EUR");
+    }
+
+    public static void currencyGoodbye() {
+        displayMessage("Thank you for using Currency Calculator");
+    }
 }
