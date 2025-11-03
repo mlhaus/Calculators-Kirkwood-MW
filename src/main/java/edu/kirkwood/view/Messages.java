@@ -17,7 +17,7 @@ public class Messages {
         System.out.println("Enter calculations in the format: [fraction] [operator] [fraction]");
         System.out.println("Example: 1 1/2 + 3/4\n");
     }
-
+    
     public static void fractionGoodbye() {
         displayMessage("Thank you for using Marc's Fraction Calculator");
     }
@@ -30,6 +30,14 @@ public class Messages {
         displayMessage("Thank you for using Blake's Set Calculator!");
     }
   
+    public static void unitCircleGreet() {
+        displayMessage("Welcome to ZeeKonCal's Unit Circle Calculator");
+    }
+    
+    public static void unitCircleGoodbye() {
+        displayMessage("Thank you for using ZeeKonCal's Unit Circle Calculator");
+    }
+  
     public static void timeGreet() {
         displayMessage("Welcome to Jason's Time Calculator");
         System.out.println("Enter calculations in the format: [[number] [unit] or 'answer'] [operator] [number] [unit (optional)]");
@@ -39,7 +47,6 @@ public class Messages {
     public static void timeGoodbye() {
         displayMessage("Thank you for using Jason's Time Calculator");
     }
-    
 
     public static void ingredientGreet() {
         displayMessage("Welcome to Edward's Ingredient Calculator");
