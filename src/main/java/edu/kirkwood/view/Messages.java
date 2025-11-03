@@ -22,6 +22,14 @@ public class Messages {
         displayMessage("Thank you for using Marc's Fraction Calculator");
     }
 
+    public static void setGreet() {
+        displayMessage("Welcome to Blake's Set Calculator!");
+    }
+
+    public static void setGoodbye() {
+        displayMessage("Thank you for using Blake's Set Calculator!");
+    }
+  
     public static void unitCircleGreet() {
         displayMessage("Welcome to ZeeKonCal's Unit Circle Calculator");
     }
