@@ -23,6 +23,7 @@ public class MainMenu {
                     break;
                 case 2:
                     SetCalculator.start();
+                    break;
                 default:
                     return;
             } // end switch
