@@ -1,7 +1,11 @@
 package edu.kirkwood.view;
 
+import edu.kirkwood.controller.EthansTemperatureCalculator;
 import edu.kirkwood.controller.FractionCalculator;
 import edu.kirkwood.controller.UnitCircleCalculator;
+import edu.kirkwood.controller.TimeCalculator;
+import edu.kirkwood.controller.edward.IngredientCalculator;
+
 import static edu.kirkwood.view.UIUtility.printMenu;
 import static edu.kirkwood.view.UserInput.getInt;
 
@@ -11,6 +15,9 @@ public class MainMenu {
         String[] menuItems = {
                 "Marc's Fraction Calculator", 
                 "Calder's Unit Circle Calculator", 
+                "Jason's Time Calculator",
+                "McKeown's Ingredient Calculator",
+                "Ethan's Temperature Calculator",
                 "Quit"
         };
         while(true) {
@@ -22,6 +29,15 @@ public class MainMenu {
                     break;
                 case 2:
                     UnitCircleCalculator.start();
+                    break;
+                case 3:
+                    TimeCalculator.start();
+                    break;
+                case 4:
+                    IngredientCalculator.start();
+                    break;
+                case 5:
+                    EthansTemperatureCalculator.start();
                     break;
                 default:
                     return;
