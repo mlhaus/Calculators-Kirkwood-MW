@@ -21,6 +21,14 @@ public class Messages {
     public static void fractionGoodbye() {
         displayMessage("Thank you for using Marc's Fraction Calculator");
     }
-    
+    public static void timeGreet() {
+        displayMessage("Welcome to Jason's Time Calculator");
+        System.out.println("Enter calculations in the format: [[number] [unit] or 'answer'] [operator] [number] [unit (optional)]");
+        System.out.println("Example: 1 day + 1 hour\n");
+    }
+
+    public static void timeGoodbye() {
+        displayMessage("Thank you for using Jason's Time Calculator");
+    }
     
 }
