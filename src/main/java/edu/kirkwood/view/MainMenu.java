@@ -4,12 +4,10 @@ import edu.kirkwood.controller.ConeCalculator;
 import edu.kirkwood.controller.EthansTemperatureCalculator;
 import edu.kirkwood.controller.FractionCalculator;
 import edu.kirkwood.controller.InvestmentCalculator;
-import edu.kirkwood.controller.MyCalculator;
 import edu.kirkwood.controller.SetCalculator;
-import edu.kirkwood.controller.UnitCircleCalculator;
 import edu.kirkwood.controller.TimeCalculator;
+import edu.kirkwood.controller.UnitCircleCalculator;
 import edu.kirkwood.controller.edward.IngredientCalculator;
-
 import static edu.kirkwood.view.UIUtility.printMenu;
 import static edu.kirkwood.view.UserInput.getInt;
 
