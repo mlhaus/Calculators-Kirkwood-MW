@@ -10,7 +10,7 @@ public class MainMenu {
     public static void show() {
         String[] menuItems = {
                 "Marc's Fraction Calculator", 
-                "Student's Math Calculator", 
+                "Gabriel's Character Fighter Calculator",
                 "Quit"
         };
         while(true) {
