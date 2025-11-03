@@ -9,6 +9,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+
 class PolynomialTermTest {
 
 	private PolynomialTerm ptDefault, ptConst0, ptConst1, ptConstVar, ptVarXOrder1, ptVarXOrder2, ptVarY, ptChain;
