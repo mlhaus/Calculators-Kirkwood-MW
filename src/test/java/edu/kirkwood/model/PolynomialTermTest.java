@@ -1,8 +1,10 @@
 import static org.junit.jupiter.api.Assertions.*;
 
+import edu.kirkwood.model.PolynomialTerm;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
+
 
 class PolynomialTermTest {
 

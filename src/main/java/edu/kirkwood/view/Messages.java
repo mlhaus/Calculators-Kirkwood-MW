@@ -21,6 +21,23 @@ public class Messages {
     public static void fractionGoodbye() {
         displayMessage("Thank you for using Marc's Fraction Calculator");
     }
-    
-    
+
+    /**
+     * Displays a greeting message for the Depreciation Calculator.
+     * Gives clear instructions to the user.
+     */
+
+    public static void depreciationGreet() {
+        displayMessage("Welcome to the Straight-Line Depreciation Calculator!");
+        System.out.println("This tool helps you calculate asset depreciation over time.");
+        System.out.println("Please enter positive integer values for cost, salvage,");
+        System.out.println("and useful life when prompted.\n"); // Added newline for better spacing
+    }
+
+    /**
+     * Displays a goodbye message for the Depreciation Calculator.
+     */
+    public static void depreciationGoodbye() {
+        displayMessage("Thank you for using the Depreciation Calculator. Goodbye!");
+    }
 }
