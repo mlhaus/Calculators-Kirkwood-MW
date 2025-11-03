@@ -21,6 +21,14 @@ public class Messages {
     public static void fractionGoodbye() {
         displayMessage("Thank you for using Marc's Fraction Calculator");
     }
-    
-    
+
+    public static void ethanGreet() {
+        displayMessage("Welcome to Ethan's EthansTemperature Calculator!");
+        System.out.println("Enter a temperature value and scale (C, F, K).");
+        System.out.println("You can then convert it to another scale.");
+    }
+
+    public static void ethanGoodbye(){
+        displayMessage("Thank you for using Ethan's EthansTemperature Calculator. Goodbye!");
+    }
 }
