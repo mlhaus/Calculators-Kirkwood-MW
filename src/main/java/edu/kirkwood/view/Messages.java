@@ -21,6 +21,7 @@ public class Messages {
     public static void fractionGoodbye() {
         displayMessage("Thank you for using Marc's Fraction Calculator");
     }
+  
     public static void timeGreet() {
         displayMessage("Welcome to Jason's Time Calculator");
         System.out.println("Enter calculations in the format: [[number] [unit] or 'answer'] [operator] [number] [unit (optional)]");
@@ -31,4 +32,25 @@ public class Messages {
         displayMessage("Thank you for using Jason's Time Calculator");
     }
     
+
+    public static void ingredientGreet() {
+        displayMessage("Welcome to Edward's Ingredient Calculator");
+        System.out.println("Perform arithmetic operations on cooking ingredients with automatic unit conversions");
+        System.out.println("Supports volume units: tsp, tbsp, fl oz, cup, pint, quart");
+        System.out.println("Supports weight units: oz, lb, g, kg");
+    }
+
+    public static void ingredientGoodbye() {
+        displayMessage("Thank you for using Edward's Ingredient Calculator");
+    }
+  
+    public static void ethanGreet() {
+        displayMessage("Welcome to Ethan's EthansTemperature Calculator!");
+        System.out.println("Enter a temperature value and scale (C, F, K).");
+        System.out.println("You can then convert it to another scale.");
+    }
+
+    public static void ethanGoodbye(){
+        displayMessage("Thank you for using Ethan's EthansTemperature Calculator. Goodbye!");
+    }
 }
