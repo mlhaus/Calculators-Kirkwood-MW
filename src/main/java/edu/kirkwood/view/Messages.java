@@ -21,6 +21,13 @@ public class Messages {
     public static void fractionGoodbye() {
         displayMessage("Thank you for using Marc's Fraction Calculator");
     }
-    
+
+    public static void asleGreet() {
+        displayMessage("Welcome to the Asle's Measurement Calculator ");
+        System.out.println("Please choose from the following options" +
+                ":");
+    }
+
+    public static void asleGoodbye() {displayMessage("Thank you for using Asle's Measurement Calculator");}
     
 }
