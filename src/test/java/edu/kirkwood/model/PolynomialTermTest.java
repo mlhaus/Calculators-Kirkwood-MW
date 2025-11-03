@@ -1,3 +1,5 @@
+package edu.kirkwood.model;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import edu.kirkwood.model.PolynomialTerm;
