@@ -21,6 +21,13 @@ public class Messages {
     public static void fractionGoodbye() {
         displayMessage("Thank you for using Marc's Fraction Calculator");
     }
-    
+
+    public static void setGreet() {
+        displayMessage("Welcome to Blake's Set Calculator!");
+    }
+
+    public static void setGoodbye() {
+        displayMessage("Thank you for using Blake's Set Calculator!");
+    }
     
 }
