@@ -28,7 +28,7 @@ public class Messages {
      */
 
     public static void depreciationGreet() {
-        displayMessage("Welcome to the Straight-Line Depreciation Calculator!");
+        displayMessage("Welcome to the Straight-Line Depreciation Calculator!!");
         System.out.println("This tool helps you calculate asset depreciation over time.");
         System.out.println("Please enter positive integer values for cost, salvage,");
         System.out.println("and useful life when prompted.\n"); // Added newline for better spacing
