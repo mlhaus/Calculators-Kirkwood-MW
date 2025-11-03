@@ -1,7 +1,7 @@
 package edu.kirkwood.view;
 
 import edu.kirkwood.controller.FractionCalculator;
-
+import edu.kirkwood.controller.UnitCircleCalculator;
 import static edu.kirkwood.view.UIUtility.printMenu;
 import static edu.kirkwood.view.UserInput.getInt;
 
@@ -10,7 +10,7 @@ public class MainMenu {
     public static void show() {
         String[] menuItems = {
                 "Marc's Fraction Calculator", 
-                "Student's Math Calculator", 
+                "Calder's Unit Circle Calculator", 
                 "Quit"
         };
         while(true) {
@@ -21,6 +21,7 @@ public class MainMenu {
                     FractionCalculator.start();
                     break;
                 case 2:
+                    UnitCircleCalculator.start();
                     break;
                 default:
                     return;
