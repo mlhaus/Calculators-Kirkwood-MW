@@ -2,10 +2,9 @@
 
 package edu.kirkwood.model.edward;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -101,31 +100,37 @@ public class IngredientTest {
     }
 
     @Test
-    @DisplayName("Test constructor with negative quantity throws exception")
+    @DisplayName("Test constructor with negative quantity for shortage tracking")
     void testConstructorNegativeQuantity() {
         // Arrange
         String name = "Test";
         double quantity = -1.0;
         Unit unit = Unit.CUP;
 
-        // Act & Assert
-        assertThrows(IllegalArgumentException.class, () -> {
-            new Ingredient(name, quantity, unit);
-        });
+        // Act
+        Ingredient ingredient = new Ingredient(name, quantity, unit);
+
+        // Assert
+        assertEquals(-1.0, ingredient.getQuantity(), 0.001);
+        assertEquals("Test", ingredient.getName());
+        assertEquals(Unit.CUP, ingredient.getUnit());
     }
 
     @Test
-    @DisplayName("Test constructor with zero quantity throws exception")
+    @DisplayName("Test constructor with zero quantity")
     void testConstructorZeroQuantity() {
         // Arrange
         String name = "Test";
         double quantity = 0.0;
         Unit unit = Unit.CUP;
 
-        // Act & Assert
-        assertThrows(IllegalArgumentException.class, () -> {
-            new Ingredient(name, quantity, unit);
-        });
+        // Act
+        Ingredient ingredient = new Ingredient(name, quantity, unit);
+
+        // Assert
+        assertEquals(0.0, ingredient.getQuantity(), 0.001);
+        assertEquals("Test", ingredient.getName());
+        assertEquals(Unit.CUP, ingredient.getUnit());
     }
 
     @Test
@@ -134,6 +139,20 @@ public class IngredientTest {
         // Arrange
         String name = "Test";
         double quantity = 0.0005; // Below MIN_QUANTITY
+        Unit unit = Unit.CUP;
+
+        // Act & Assert
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Ingredient(name, quantity, unit);
+        });
+    }
+
+    @Test
+    @DisplayName("Test constructor with very small negative quantity throws exception")
+    void testConstructorVerySmallNegativeQuantity() {
+        // Arrange
+        String name = "Test";
+        double quantity = -0.0005; // Below MIN_QUANTITY threshold
         Unit unit = Unit.CUP;
 
         // Act & Assert
@@ -451,14 +470,17 @@ public class IngredientTest {
     }
 
     @Test
-    @DisplayName("Test ingredient subtraction resulting in negative throws exception")
+    @DisplayName("Test ingredient subtraction resulting in negative for shortage tracking")
     void testSubtractionNegativeResult() {
         // Arrange - sugar (1.0 cup) minus flour (2.5 cups) = negative
 
-        // Act & Assert
-        assertThrows(IllegalArgumentException.class, () -> {
-            sugar.subtract(flour); // 1.0 - 2.5 = -1.5
-        });
+        // Act
+        Ingredient result = sugar.subtract(flour); // 1.0 - 2.5 = -1.5
+
+        // Assert
+        assertEquals(-1.5, result.getQuantity(), 0.001);
+        assertEquals(Unit.CUP, result.getUnit());
+        assertTrue(result.getName().contains("-"));
     }
 
     @Test
@@ -659,8 +681,9 @@ public class IngredientTest {
         String sugarFormatted = sugar.getFormattedQuantity();
 
         // Assert
-        assertEquals("2.500", flourFormatted);
-        assertEquals("1.000", sugarFormatted);
+        // Helpers.round() strips trailing zeros, so "2.5" instead of "2.500"
+        assertEquals("2.5", flourFormatted);
+        assertEquals("1", sugarFormatted);
     }
 
     // ========== OBJECT METHOD TESTS ==========
@@ -674,9 +697,27 @@ public class IngredientTest {
 
         // Assert
         assertTrue(result.contains("Flour"));
-        assertTrue(result.contains("2.500"));
+        assertTrue(result.contains("2.5")); // Helpers.round strips trailing zeros
         assertTrue(result.contains("cup"));
     }
+
+    @Test
+    @DisplayName("Test toString with negative quantity shows shortage")
+    void testToStringNegative() {
+        // Arrange
+        Ingredient shortage = new Ingredient("Flour", -1.5, Unit.CUP);
+
+        // Act
+        String result = shortage.toString();
+
+        // Assert
+        assertTrue(result.contains("SHORTAGE"));
+        assertTrue(result.contains("Flour"));
+        assertTrue(result.contains("-1.5"));
+        assertTrue(result.contains("cup"));
+    }
+
+
 
     @Test
     @DisplayName("Test equals with same object")

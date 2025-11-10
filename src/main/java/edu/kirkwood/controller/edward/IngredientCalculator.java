@@ -5,10 +5,12 @@ package edu.kirkwood.controller.edward;
 import edu.kirkwood.model.edward.Ingredient;
 import edu.kirkwood.model.edward.Unit;
 import edu.kirkwood.model.edward.UnitConverter;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import static edu.kirkwood.view.Messages.*;
+import static edu.kirkwood.view.Messages.ingredientGoodbye;
+import static edu.kirkwood.view.Messages.ingredientGreet;
 import static edu.kirkwood.view.UIUtility.*;
 import static edu.kirkwood.view.UserInput.*;
 
@@ -25,6 +27,7 @@ public class IngredientCalculator {
                 "Perform Arithmetic Operations",
                 "Convert Units",
                 "Display All Ingredients",
+                "Delete Ingredient",
                 "Return to Main Menu"
         };
 
@@ -45,6 +48,9 @@ public class IngredientCalculator {
                 case 4:
                     displayIngredients();
                     break;
+                case 5:
+                    deleteIngredient();
+                    break;
                 default:
                     ingredientGoodbye();
                     return;
@@ -61,7 +67,7 @@ public class IngredientCalculator {
 
             displayMessage("Create New Ingredient");
             String name = getString("Enter ingredient name");
-            double quantity = getDouble("Enter quantity", true, 0.001, Double.MAX_VALUE);
+            double quantity = getDouble("Enter quantity (negative for shortage)", true, -999999.999, 999999.999);
 
             displayMessage("Available Units:");
             displayMessage("Volume: tsp, tbsp, fl oz, cup, pint, quart");
@@ -138,7 +144,7 @@ public class IngredientCalculator {
                     displayIngredientsList();
                     int multiplyIndex = getInt("Select ingredient to multiply (number)", true, 1, ingredients.size()) - 1;
                     Ingredient ingredientToMultiply = ingredients.get(multiplyIndex);
-                    double multiplier = getDouble("Enter multiplier", true, 0.001, Double.MAX_VALUE);
+                    double multiplier = getDouble("Enter multiplier (must be positive)", true, 0.001, Double.MAX_VALUE);
 
                     // Create result with clean name (no operation symbols)
                     Ingredient tempResult = ingredientToMultiply.multiply(multiplier);
@@ -149,7 +155,7 @@ public class IngredientCalculator {
                     displayIngredientsList();
                     int divideIndex = getInt("Select ingredient to divide (number)", true, 1, ingredients.size()) - 1;
                     Ingredient ingredientToDivide = ingredients.get(divideIndex);
-                    double divisor = getDouble("Enter divisor", true, 0.001, Double.MAX_VALUE);
+                    double divisor = getDouble("Enter divisor (must be positive)", true, 0.001, Double.MAX_VALUE);
 
                     // Create result with clean name (no operation symbols)
                     Ingredient tempDivideResult = ingredientToDivide.divide(divisor);
@@ -160,10 +166,32 @@ public class IngredientCalculator {
             if (result != null) {
                 displaySuccess("Result: " + result.toString());
 
-                boolean saveResult = getBoolean("Save result as new ingredient?", false);
+                boolean saveResult = getBoolean("Save result as ingredient?", false);
                 if (saveResult) {
-                    ingredients.add(result);
-                    displaySuccess("Result saved!");
+                    // Ask if they want to overwrite an existing ingredient
+                    if (!ingredients.isEmpty()) {
+                        boolean overwrite = getBoolean("Overwrite an existing ingredient?", false);
+                        if (overwrite) {
+                            displayIngredientsList();
+                            int replaceIndex = getInt("Select ingredient to replace (number)", true, 1, ingredients.size()) - 1;
+                            Ingredient toReplace = ingredients.get(replaceIndex);
+
+                            // Keep the original name if user wants
+                            boolean keepName = getBoolean("Keep original name '" + toReplace.getName() + "'?", false);
+                            if (keepName) {
+                                result.setName(toReplace.getName());
+                            }
+
+                            ingredients.set(replaceIndex, result);
+                            displaySuccess("Ingredient replaced!");
+                        } else {
+                            ingredients.add(result);
+                            displaySuccess("Result saved as new ingredient!");
+                        }
+                    } else {
+                        ingredients.add(result);
+                        displaySuccess("Result saved!");
+                    }
                 }
             }
 
@@ -224,6 +252,36 @@ public class IngredientCalculator {
         } catch (Exception e) {
             displayError("Error converting units: " + e.getMessage());
             pressEnterToContinue(); // Added this line for any other errors
+        }
+
+        pressEnterToContinue();
+    }
+
+    private static void deleteIngredient() {
+        if (ingredients.isEmpty()) {
+            displayError("No ingredients available to delete");
+            pressEnterToContinue();
+            return;
+        }
+
+        try {
+            displayMessage("Delete Ingredient");
+            displayIngredientsList();
+            printLine();
+
+            int index = getInt("Select ingredient to delete (number)", true, 1, ingredients.size()) - 1;
+            Ingredient toDelete = ingredients.get(index);
+
+            boolean confirm = getBoolean("Delete '" + toDelete.getName() + "'?", true);
+            if (confirm) {
+                ingredients.remove(index);
+                displaySuccess("Ingredient deleted successfully");
+            } else {
+                displayMessage("Deletion cancelled");
+            }
+
+        } catch (Exception e) {
+            displayError("Error deleting ingredient: " + e.getMessage());
         }
 
         pressEnterToContinue();
