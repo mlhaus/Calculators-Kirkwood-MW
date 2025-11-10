@@ -2,8 +2,9 @@
 
 package edu.kirkwood.model.edward;
 
-import java.util.Objects;
+import edu.kirkwood.view.Helpers;
 
+import java.util.Objects;
 import static edu.kirkwood.model.edward.IngredientCalculatorParameters.*;
 
 /**
@@ -29,11 +30,11 @@ public class Ingredient {
         if (name.length() > MAX_INGREDIENT_NAME_LENGTH) {
             throw new IllegalArgumentException("Ingredient name too long (max " + MAX_INGREDIENT_NAME_LENGTH + " characters)");
         }
-        if (quantity < MIN_QUANTITY) {
-            throw new IllegalArgumentException("Quantity must be positive and at least " + MIN_QUANTITY);
+        if (quantity < -MAX_QUANTITY || quantity > MAX_QUANTITY) {
+            throw new IllegalArgumentException("Quantity must be between -" + MAX_QUANTITY + " and " + MAX_QUANTITY);
         }
-        if (quantity > MAX_QUANTITY) {
-            throw new IllegalArgumentException("Quantity too large (max " + MAX_QUANTITY + ")");
+        if (Math.abs(quantity) < MIN_QUANTITY && quantity != 0) {
+            throw new IllegalArgumentException("Non-zero quantity must be at least " + MIN_QUANTITY + " in absolute value");
         }
         if (unit == null) {
             throw new IllegalArgumentException("Unit cannot be null");
@@ -113,11 +114,11 @@ public class Ingredient {
      * @throws IllegalArgumentException if quantity is not positive
      */
     public void setQuantity(double quantity) {
-        if (quantity < MIN_QUANTITY) {
-            throw new IllegalArgumentException("Quantity must be positive");
+        if (quantity < -MAX_QUANTITY || quantity > MAX_QUANTITY) {
+            throw new IllegalArgumentException("Quantity must be between -" + MAX_QUANTITY + " and " + MAX_QUANTITY);
         }
-        if (quantity > MAX_QUANTITY) {
-            throw new IllegalArgumentException("Quantity too large");
+        if (Math.abs(quantity) < MIN_QUANTITY && quantity != 0) {
+            throw new IllegalArgumentException("Non-zero quantity must be at least " + MIN_QUANTITY + " in absolute value");
         }
         this.quantity = quantity;
     }
@@ -186,8 +187,11 @@ public class Ingredient {
         }
 
         double resultQuantity = this.quantity - otherQuantityConverted;
-        if (resultQuantity < MIN_QUANTITY) {
-            throw new IllegalArgumentException("Subtraction result must be positive");
+
+        // Allow negative results to track shortages/deficits
+        // Only validate against reasonable bounds
+        if (resultQuantity < -MAX_QUANTITY) {
+            throw new IllegalArgumentException("Result quantity out of reasonable range");
         }
 
         return new Ingredient(this.name + " - " + other.name, resultQuantity, this.unit);
@@ -285,7 +289,7 @@ public class Ingredient {
      * @return Formatted quantity string
      */
     public String getFormattedQuantity() {
-        return String.format(QUANTITY_FORMAT, this.quantity);
+        return Helpers.round(this.quantity, DECIMAL_PRECISION);
     }
 
     // ========== OVERRIDDEN METHODS ==========
@@ -295,9 +299,13 @@ public class Ingredient {
      */
     @Override
     public String toString() {
-        return String.format("%s: %s %s",
+        String quantityStr = getFormattedQuantity();
+        // Add indicator for negative quantities (shortages)
+        String prefix = this.quantity < 0 ? "SHORTAGE: " : "";
+        return String.format("%s%s: %s %s",
+                prefix,
                 this.name,
-                getFormattedQuantity(),
+                quantityStr,
                 this.unit.getAbbreviation());
     }
 
