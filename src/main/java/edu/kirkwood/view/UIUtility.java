@@ -59,4 +59,9 @@ public class UIUtility {
         sb.append("+");
         return sb.toString();
     }
+
+    public static void clearScreen() {
+        System.out.print("\033[H\033[2J\033[3B");
+        System.out.flush();
+    }
 }
