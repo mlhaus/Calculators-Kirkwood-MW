@@ -91,15 +91,14 @@ public class Messages {
 
     public static void ingredientGreet() {
         displayMessage("Welcome to Edward's Ingredient Calculator");
-        System.out.println("Perform arithmetic operations on cooking ingredients with automatic unit conversions");
-        System.out.println("Supports volume units: tsp, tbsp, fl oz, cup, pint, quart");
-        System.out.println("Supports weight units: oz, lb, g, kg");
+        System.out.println("Perform calculations with cooking ingredients");
+        System.out.println("Supports volume (tsp, tbsp, cups, etc.) and weight (oz, lb, g, kg) measurements\n");
     }
 
     public static void ingredientGoodbye() {
         displayMessage("Thank you for using Edward's Ingredient Calculator");
     }
-  
+
     public static void ethanGreet() {
         displayMessage("Welcome to Ethan's EthansTemperature Calculator!");
         System.out.println("Enter a temperature value and scale (C, F, K).");
