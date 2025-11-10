@@ -109,4 +109,18 @@ public class Messages {
     public static void ethanGoodbye(){
         displayMessage("Thank you for using Ethan's EthansTemperature Calculator. Goodbye!");
     }
+
+    public static void characterCalcGreet(){
+        displayMessage("Welcome to the character moveset Calculator!");
+        System.out.println("Make sure that you type the option exactly as it is shown (just the word)");
+        System.out.println("A move startup is how long it takes for the move to hit the opponent. Enter in a positive whole number.");
+        System.out.println("A character status is one of the following (Stand, Crouch, downed).");
+        System.out.println("A move type is the type of move the character will do which is one of the following (Command Grab, high, medium, low, throw.)");
+        System.out.println("Enter calculations in the format: [Character1 MoveStartup], [Character1 ChacracterStatus]," +
+                " [Character1 MoveType], [Character2 MoveStartup], [Character2 ChacracterStatus], [Character2 MoveType]");
+    }
+
+    public static void characterCalcGoodbye(){
+        displayMessage("Thank you for using the character moveset Calculator");
+    }
 }
