@@ -263,8 +263,4 @@ public class UserInput {
         }
         return date;
     }
-
-    public static void main(String[] args) {
-        getBoolean("Continue?", true);
-    }
 }

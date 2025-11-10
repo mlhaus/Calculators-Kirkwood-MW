@@ -60,6 +60,34 @@ class UserInputTest {
         assertEquals(expected, actual);
     }
 
+    // Dine
+    @Test
+    @DisplayName("Test getDouble with a valid input on the first try")
+    void getDouble_ValidInput_ReturnsDouble() {
+        // Arrange: Configure the mock scanner to return a valid double string
+        when(mockScanner.nextLine()).thenReturn("85.5");
+
+        // Act: Call the method under test
+        double result = UserInput.getDouble("Enter your grade", true, 0.0, 100.0);
+
+        // Assert: Check if the returned value is correct
+        assertEquals(85.5, result, 0.001);
+    }
+
+    // Dine
+    @Test
+    @DisplayName("Test getDouble with invalid text, then a valid number")
+    void getDouble_InvalidTextThenValidNumber_ReturnsDouble() {
+        // Arrange: Simulate the user entering "abc" first, then "12.3"
+        when(mockScanner.nextLine()).thenReturn("abc", "12.3");
+
+        // Act: Call the method under test
+        double result = UserInput.getDouble("Enter a value", true, 10.0, 20.0);
+
+        // Assert: The method should re-prompt and eventually return the valid number
+        assertEquals(12.3, result, 0.001);
+    }
+
     // Lawson
     @Test
     void testGetInt_ValidInputWithinRange() throws Exception {
