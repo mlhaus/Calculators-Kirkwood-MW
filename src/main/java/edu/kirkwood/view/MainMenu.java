@@ -1,13 +1,6 @@
 package edu.kirkwood.view;
 
-import edu.kirkwood.controller.ConeCalculator;
-import edu.kirkwood.controller.EthansTemperatureCalculator;
-import edu.kirkwood.controller.FractionCalculator;
-import edu.kirkwood.controller.LawsonsCurrencyCalculator;
-import edu.kirkwood.controller.InvestmentCalculator;
-import edu.kirkwood.controller.SetCalculator;
-import edu.kirkwood.controller.UnitCircleCalculator;
-import edu.kirkwood.controller.TimeCalculator;
+import edu.kirkwood.controller.*;
 import edu.kirkwood.controller.edward.IngredientCalculator;
 
 import static edu.kirkwood.view.UIUtility.printMenu;
@@ -26,6 +19,7 @@ public class MainMenu {
                 "Jason's Time Calculator",
                 "McKeown's Ingredient Calculator",
                 "Ethan's Temperature Calculator",
+                "Yousif Money Calculator",
                 "Quit"
         };
         while(true) {
@@ -59,6 +53,8 @@ public class MainMenu {
                 case 9:
                     EthansTemperatureCalculator.start();
                     break;
+                case 10:
+                    YousifMoneyCalculator.start();
                 default:
                     return;
             } // end switch

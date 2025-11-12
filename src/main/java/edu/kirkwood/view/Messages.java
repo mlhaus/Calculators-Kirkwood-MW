@@ -108,4 +108,13 @@ public class Messages {
     public static void ethanGoodbye(){
         displayMessage("Thank you for using Ethan's EthansTemperature Calculator. Goodbye!");
     }
+    public static void myCalculatorGreet() {
+        displayMessage("Welcome to Yousif Money Calculator");
+        System.out.println("Enter calculations in the format: [Money] [operator] [Money]");
+        System.out.println("Example: 100USD + 10USD\n");
+        System.out.println("Allowed Currencies: USD, GBP, CAD");
+    }
+    public static void myCalculatorGoodbye() {
+        displayMessage("Thanks for join me in to my money Calculator");
+    }
 }
