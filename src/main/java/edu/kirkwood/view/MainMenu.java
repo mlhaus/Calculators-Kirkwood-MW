@@ -17,14 +17,7 @@ public class MainMenu {
     public static void show() {
         String[] menuItems = {
                 "Marc's Fraction Calculator", 
-                "Lawson's Currency Calculator",
-                "Cone Calculator",
-                "Lizbeth's Math Calculator",
-                "Blake's Set Calculator",
-                "Calder's Unit Circle Calculator", 
-                "Jason's Time Calculator",
-                "McKeown's Ingredient Calculator",
-                "Ethan's Temperature Calculator",
+                "Gabriel's Character Fighter Calculator",
                 "Quit"
         };
         while(true) {
