@@ -108,4 +108,13 @@ public class Messages {
     public static void ethanGoodbye(){
         displayMessage("Thank you for using Ethan's EthansTemperature Calculator. Goodbye!");
     }
+
+    public static void ryanTemperatureGreet() {
+        UIUtility.displayMessage("Welcome to Ryan's Temperature Converter");
+        System.out.println("Enter a whole number when prompted");
+    }
+
+    public static void ryanTemperatureGoodbye() {
+        UIUtility.displayMessage("Thank you for using Ryan's Temperature Converter");
+    }
 }
