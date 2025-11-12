@@ -6,10 +6,9 @@ import edu.kirkwood.controller.FractionCalculator;
 import edu.kirkwood.controller.LawsonsCurrencyCalculator;
 import edu.kirkwood.controller.InvestmentCalculator;
 import edu.kirkwood.controller.SetCalculator;
-import edu.kirkwood.controller.UnitCircleCalculator;
 import edu.kirkwood.controller.TimeCalculator;
+import edu.kirkwood.controller.UnitCircleCalculator;
 import edu.kirkwood.controller.edward.IngredientCalculator;
-
 import static edu.kirkwood.view.UIUtility.printMenu;
 import static edu.kirkwood.view.UserInput.getInt;
 
