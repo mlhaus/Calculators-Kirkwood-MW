@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class YousifCalculatorTest {
 
     @Test
-    void splitCalculationAdd() {
+    void splitCalculationAdd1() {
 
         String input = "100USD + 100USD";
         String[] e = {"100USD", "+", "100USD"};

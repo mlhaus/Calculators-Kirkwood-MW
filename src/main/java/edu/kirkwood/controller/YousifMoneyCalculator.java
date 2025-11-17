@@ -14,7 +14,6 @@ import static edu.kirkwood.view.UserInput.getString;
 public class YousifMoneyCalculator {
     /**
      * this message is to start the calculator
-     *
      * @throws Exception
      */
     public static void start() {
