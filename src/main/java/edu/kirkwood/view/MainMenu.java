@@ -19,6 +19,7 @@ public class MainMenu {
                 "McKeown's Ingredient Calculator",
                 "Ethan's Temperature Calculator",
                 "Gabriel's Character Fighter Calculator",
+                "Dine Depreciation Calculator",
                 "Quit"
         };
         while(true) {
@@ -54,6 +55,9 @@ public class MainMenu {
                     break;
                 case 10:
                     CharacterMoveCalc.start();
+                    break;
+                case 11:
+                    DepreciationCalculator.start();
                     break;
                 default:
                     return;
