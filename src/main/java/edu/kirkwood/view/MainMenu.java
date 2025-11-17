@@ -2,7 +2,6 @@ package edu.kirkwood.view;
 
 import edu.kirkwood.controller.*;
 import edu.kirkwood.controller.edward.IngredientCalculator;
-
 import static edu.kirkwood.view.UIUtility.printMenu;
 import static edu.kirkwood.view.UserInput.getInt;
 
@@ -10,16 +9,16 @@ public class MainMenu {
 
     public static void show() {
         String[] menuItems = {
-                "Marc's Fraction Calculator", 
+                "Marc's Fraction Calculator",
                 "Lawson's Currency Calculator",
                 "Cone Calculator",
                 "Lizbeth's Math Calculator",
                 "Blake's Set Calculator",
-                "Calder's Unit Circle Calculator", 
+                "Calder's Unit Circle Calculator",
                 "Jason's Time Calculator",
                 "McKeown's Ingredient Calculator",
                 "Ethan's Temperature Calculator",
-                "Yousif Money Calculator",
+                "Gabriel's Character Fighter Calculator",
                 "Quit"
         };
         while(true) {
@@ -54,7 +53,8 @@ public class MainMenu {
                     EthansTemperatureCalculator.start();
                     break;
                 case 10:
-                    YousifMoneyCalculator.start();
+                    CharacterMoveCalc.start();
+                    break;
                 default:
                     return;
             } // end switch

@@ -73,7 +73,7 @@ public class UnitCircleCalculatorTest {
                 // Arrange
                 // 1. User types "deg" as an incorrect input message, then types "degrees"
                 staticUserInput.when(() -> UserInput.getString(eq("Is your angle in degrees or radians?"), eq(true)))
-                        .thenReturn("deg", "degrees");
+                        .thenReturn("degradians", "degrees");
                 // 2. User enters 45 for the angle
                 staticUserInput.when(() -> UserInput.getDouble(anyString(), eq(true)))
                         .thenReturn(45.0);
@@ -135,7 +135,7 @@ public class UnitCircleCalculatorTest {
         Angle angle = new Angle(4);
         boolean isDegrees = false;
         angle.correctAngle(isDegrees);
-        String expected = "The sin of 4 radians is -0.7568; the cos of 4 radians is -0.65364; your angle is in quadrant 3.\n\n";
+        String expected = "The sin of 4 radians is -0.7568\nThe cos of 4 radians is -0.65364\nYour angle is in quadrant 3.\n\n";
         // Act
         UnitCircleCalculator.printAngleDetails(angle, isDegrees);
         // Assert
@@ -149,7 +149,7 @@ public class UnitCircleCalculatorTest {
         Angle angle = new Angle(45);
         boolean isDegrees = true;
         angle.correctAngle(isDegrees);
-        String expected = "The sin of 45 degrees is Root(2)/2; the cos of 45 degrees is Root(2)/2; your angle is in quadrant 1.\n\n";
+        String expected = "The sin of 45 degrees is Root(2)/2\nThe cos of 45 degrees is Root(2)/2\nYour angle is in quadrant 1.\n\n";
         // Act
         UnitCircleCalculator.printAngleDetails(angle, isDegrees);
         // Assert
