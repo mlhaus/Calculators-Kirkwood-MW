@@ -19,6 +19,8 @@ public class MainMenu {
                 "Jason's Time Calculator",
                 "McKeown's Ingredient Calculator",
                 "Ethan's Temperature Calculator",
+                "Gabriel's Character Fighter Calculator",
+                "Dine Depreciation Calculator",
                 "Yousif's Money Calculator",
                 "Quit"
         };
@@ -55,6 +57,9 @@ public class MainMenu {
                     break;
                 case 10:
                     YousifMoneyCalculator.start();
+                    break;
+                case 11:
+                    DepreciationCalculator.start();
                     break;
                 default:
                     return;
