@@ -109,6 +109,15 @@ public class Messages {
         displayMessage("Thank you for using Ethan's EthansTemperature Calculator. Goodbye!");
     }
 
+    public static void ryanTemperatureGreet() {
+        UIUtility.displayMessage("Welcome to Ryan's Temperature Converter");
+        System.out.println("Enter a whole number when prompted");
+    }
+
+    public static void ryanTemperatureGoodbye() {
+        UIUtility.displayMessage("Thank you for using Ryan's Temperature Converter");
+    }
+  
     public static void characterCalcGreet(){
         displayMessage("Welcome to the character moveset Calculator!");
         System.out.println("Make sure that you type the option exactly as it is shown (just the word)");
@@ -121,5 +130,14 @@ public class Messages {
 
     public static void characterCalcGoodbye(){
         displayMessage("Thank you for using the character moveset Calculator");
+    }
+    public static void myCalculatorGreet() {
+        displayMessage("Welcome to Yousif Money Calculator");
+        System.out.println("Enter calculations in the format: [Money] [operator] [Money]");
+        System.out.println("Example: 100USD + 10USD\n");
+        System.out.println("Allowed Currencies: USD, GBP, CAD");
+    }
+    public static void myCalculatorGoodbye() {
+        displayMessage("Thanks for join me in to my money Calculator");
     }
 }
