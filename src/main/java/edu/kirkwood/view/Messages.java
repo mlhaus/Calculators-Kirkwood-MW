@@ -17,7 +17,7 @@ public class Messages {
         System.out.println("Enter calculations in the format: [fraction] [operator] [fraction]");
         System.out.println("Example: 1 1/2 + 3/4\n");
     }
-    
+
     public static void fractionGoodbye() {
         displayMessage("Thank you for using Marc's Fraction Calculator");
     }
@@ -32,7 +32,7 @@ public class Messages {
     public static void currencyGoodbye() {
         displayMessage("Thank you for using Currency Calculator");
     }
-  
+
     public static void investmentGreet() {
         displayMessage("Welcome to Lizbeth's Investment Calculator");
         // You'll need to update the instructions for how the user interacts with the investment calculator
@@ -44,7 +44,7 @@ public class Messages {
     public static void investmentGoodbye() {
         displayMessage("Thank you for using Lizbeth's Investment Calculator");
     }
-  
+
     /**
      * Displays a greeting message for the Depreciation Calculator.
      * Gives clear instructions to the user.
@@ -62,7 +62,7 @@ public class Messages {
     public static void depreciationGoodbye() {
         displayMessage("Thank you for using the Depreciation Calculator. Goodbye!");
     }
-  
+
     public static void setGreet() {
         displayMessage("Welcome to Blake's Set Calculator!");
     }
@@ -70,15 +70,15 @@ public class Messages {
     public static void setGoodbye() {
         displayMessage("Thank you for using Blake's Set Calculator!");
     }
-  
+
     public static void unitCircleGreet() {
         displayMessage("Welcome to ZeeKonCal's Unit Circle Calculator");
     }
-    
+
     public static void unitCircleGoodbye() {
         displayMessage("Thank you for using ZeeKonCal's Unit Circle Calculator");
     }
-  
+
     public static void timeGreet() {
         displayMessage("Welcome to Jason's Time Calculator");
         System.out.println("Enter calculations in the format: [[number] [unit] or 'answer'] [operator] [number] [unit (optional)]");
@@ -117,7 +117,7 @@ public class Messages {
     public static void ryanTemperatureGoodbye() {
         UIUtility.displayMessage("Thank you for using Ryan's Temperature Converter");
     }
-  
+
     public static void characterCalcGreet(){
         displayMessage("Welcome to the character moveset Calculator!");
         System.out.println("Make sure that you type the option exactly as it is shown (just the word)");
@@ -139,5 +139,16 @@ public class Messages {
     }
     public static void myCalculatorGoodbye() {
         displayMessage("Thanks for join me in to my money Calculator");
+    }
+
+    public static void distanceUnitGreet() {
+        displayMessage("Welcome to Robert's Distance Conversion Calculator");
+        System.out.println("Enter calculations in the format: [value] [unit] to [unit]\n");
+        System.out.println("Example Input: 1 mile to kilometers");
+        System.out.println("Example Output: 1 mile = 1.60934 kilometers \n");
+    }
+
+    public static void distanceUnitGoodbye() {
+        displayMessage("Thank you for using the Distance Conversion Calculator!");
     }
 }
