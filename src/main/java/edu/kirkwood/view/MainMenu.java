@@ -1,7 +1,9 @@
 package edu.kirkwood.view;
 
-import edu.kirkwood.controller.DistanceUnitCalculator;
+import edu.kirkwood.controller.*;
 import edu.kirkwood.controller.FractionCalculator;
+import edu.kirkwood.controller.edward.IngredientCalculator;
+import edu.kirkwood.controller.DistanceUnitCalculator;
 
 import static edu.kirkwood.view.UIUtility.printMenu;
 import static edu.kirkwood.view.UserInput.getInt;
@@ -22,6 +24,7 @@ public class MainMenu {
                 "Gabriel's Character Fighter Calculator",
                 "Dine Depreciation Calculator",
                 "Yousif's Money Calculator",
+                "Robert's Distance Calculator",
                 "Quit"
         };
         while(true) {
@@ -32,9 +35,39 @@ public class MainMenu {
                     FractionCalculator.start();
                     break;
 
-                case 13:
-                    DistanceUnitCalculator.start();
+                case 2:
+                    LawsonsCurrencyCalculator.start();
                     break;
+                case 3:
+                    ConeCalculator.show();
+                    break;
+                case 4:
+                    InvestmentCalculator.start();
+                    break;
+                case 5:
+                    SetCalculator.start();
+                    break;
+                case 6:
+                    UnitCircleCalculator.start();
+                    break;
+                case 7:
+                    TimeCalculator.start();
+                    break;
+                case 8:
+                    IngredientCalculator.start();
+                    break;
+                case 9:
+                    EthansTemperatureCalculator.start();
+                    break;
+                case 10:
+                    YousifMoneyCalculator.start();
+                    break;
+                case 11:
+                    DepreciationCalculator.start();
+                    break;
+
+                case 12:
+                    DistanceUnitCalculator.start();
                 default:
                     return;
             } // end switch
