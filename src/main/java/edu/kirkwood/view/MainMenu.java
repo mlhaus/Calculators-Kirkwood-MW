@@ -22,8 +22,11 @@ public class MainMenu {
                 "McKeown's Ingredient Calculator",
                 "Ethan's Temperature Calculator",
                 "Gabriel's Character Fighter Calculator",
-                "Dine Depreciation Calculator",
+                "Ryan's Temperature Calculator",
                 "Yousif's Money Calculator",
+                "Dine Depreciation Calculator",
+                "Hunter's Temperature Calculator",
+                "Abraham's Money Calculator",
                 "Robert's Distance Calculator",
                 "Quit"
         };
@@ -60,14 +63,26 @@ public class MainMenu {
                     EthansTemperatureCalculator.start();
                     break;
                 case 10:
-                    YousifMoneyCalculator.start();
+                    CharacterMoveCalc.start();
                     break;
                 case 11:
+                    RyanTemperatureCalculator.start();
+                    break;
+                case 12:
+                    YousifMoneyCalculator.start();
+                    break;
+                case 13:
                     DepreciationCalculator.start();
                     break;
-
-                case 12:
+                case 14:
+                    HunterTemperatureCalculator.start();
+                    break;
+                case 15:
+                    Money$Calculator.start();
+                    break;
+                case 16:
                     DistanceUnitCalculator.start();
+                    break;
                 default:
                     return;
             } // end switch
