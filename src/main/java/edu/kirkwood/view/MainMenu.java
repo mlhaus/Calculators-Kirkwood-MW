@@ -10,18 +10,21 @@ public class MainMenu {
 
     public static void show() {
         String[] menuItems = {
-                "Marc's Fraction Calculator", 
+                "Marc's Fraction Calculator",
                 "Lawson's Currency Calculator",
                 "Cone Calculator",
                 "Lizbeth's Math Calculator",
                 "Blake's Set Calculator",
-                "Calder's Unit Circle Calculator", 
+                "Calder's Unit Circle Calculator",
                 "Jason's Time Calculator",
                 "McKeown's Ingredient Calculator",
                 "Ethan's Temperature Calculator",
                 "Gabriel's Character Fighter Calculator",
-                "Dine Depreciation Calculator",
+                "Ryan's Temperature Calculator",
                 "Yousif's Money Calculator",
+                "Dine Depreciation Calculator",
+                "Hunter's Temperature Calculator",
+                "Abraham's Money Calculator",
                 "Quit"
         };
         while(true) {
@@ -56,10 +59,22 @@ public class MainMenu {
                     EthansTemperatureCalculator.start();
                     break;
                 case 10:
-                    YousifMoneyCalculator.start();
+                    CharacterMoveCalc.start();
                     break;
                 case 11:
+                    RyanTemperatureCalculator.start();
+                    break;
+                case 12:
+                    YousifMoneyCalculator.start();
+                    break;
+                case 13:
                     DepreciationCalculator.start();
+                    break;
+                case 14:
+                    HunterTemperatureCalculator.start();
+                    break;
+                case 15:
+                    Money$Calculator.start();
                     break;
                 default:
                     return;
