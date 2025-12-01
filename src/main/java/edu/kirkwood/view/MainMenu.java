@@ -1,7 +1,9 @@
 package edu.kirkwood.view;
 
 import edu.kirkwood.controller.*;
+import edu.kirkwood.controller.FractionCalculator;
 import edu.kirkwood.controller.edward.IngredientCalculator;
+import edu.kirkwood.controller.DistanceUnitCalculator;
 
 import static edu.kirkwood.view.UIUtility.printMenu;
 import static edu.kirkwood.view.UserInput.getInt;
@@ -25,6 +27,7 @@ public class MainMenu {
                 "Dine Depreciation Calculator",
                 "Hunter's Temperature Calculator",
                 "Abraham's Money Calculator",
+                "Robert's Distance Calculator",
                 "Quit"
         };
         while(true) {
@@ -34,6 +37,7 @@ public class MainMenu {
                 case 1:
                     FractionCalculator.start();
                     break;
+
                 case 2:
                     LawsonsCurrencyCalculator.start();
                     break;
@@ -75,6 +79,9 @@ public class MainMenu {
                     break;
                 case 15:
                     Money$Calculator.start();
+                    break;
+                case 16:
+                    DistanceUnitCalculator.start();
                     break;
                 default:
                     return;
